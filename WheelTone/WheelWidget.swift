@@ -26,6 +26,11 @@ class WheelWidget: CAShapeLayer
         
         strokeColor = UIColor.darkGrayColor().CGColor
         fillColor = UIColor.lightGrayColor().CGColor
+        
+        delegate = self
+        
+        
+        setNeedsDisplay()
     }
 
     required init(coder aDecoder: NSCoder)
@@ -49,10 +54,33 @@ class WheelWidget: CAShapeLayer
         super.init(layer: layer)
     }
     
+    override func actionForLayer(layer: CALayer!, forKey event: String!) -> CAAction!
+    {
+        if layer == self && event == "position"
+        {
+            let animation = CABasicAnimation(keyPath: event)
+            animation.duration = 0.075
+            return animation
+        }
+        else
+        {
+            return nil
+        }
+    }
+    
+    private var radiusChanged: Bool = true
+    private var previousRadius: CGFloat = 0
+    
     var radius: CGFloat
     {
         didSet
         {
+            if oldValue != radius
+            {
+                previousRadius = radius
+                radiusChanged = true
+            }
+            
             setNeedsDisplay()
         }
     }
@@ -71,13 +99,18 @@ class WheelWidget: CAShapeLayer
 
         let diameter = radius * 2
         let circumference = CGFloat(M_PI) * diameter
-   
-        let boundingBox = CGRect(x: -radius, y: -radius, width: diameter, height: diameter)
-        
+
         frame.origin.x = origin.x
         frame.origin.y = origin.y
         
-        lineDashPattern = [circumference / 40, circumference / 40]
-        path = CGPathCreateWithEllipseInRect(boundingBox, nil)
+        if radiusChanged
+        {
+            let boundingBox = CGRect(x: -radius, y: -radius, width: diameter, height: diameter); println("radiusChanged")
+            
+            lineDashPattern = [circumference / 40, circumference / 40]
+            path = CGPathCreateWithEllipseInRect(boundingBox, nil)
+            
+            radiusChanged = false
+        }
     }
 }
