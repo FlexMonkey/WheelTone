@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE42B9C41AEB965D00357EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9C31AEB965D00357EBF /* AppDelegate.swift */; };
+		BE42B9C61AEB965D00357EBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9C51AEB965D00357EBF /* ViewController.swift */; };
+		BE42B9C91AEB965D00357EBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE42B9C71AEB965D00357EBF /* Main.storyboard */; };
+		BE42B9CB1AEB965D00357EBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE42B9CA1AEB965D00357EBF /* Images.xcassets */; };
+		BE42B9CE1AEB965D00357EBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE42B9CC1AEB965D00357EBF /* LaunchScreen.xib */; };
+		BE42B9DA1AEB965D00357EBF /* WheelToneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE42B9D41AEB965D00357EBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE42B9B61AEB965D00357EBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE42B9BD1AEB965D00357EBF;
+			remoteInfo = WheelTone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE42B9BE1AEB965D00357EBF /* WheelTone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelTone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE42B9C21AEB965D00357EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE42B9C31AEB965D00357EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE42B9C51AEB965D00357EBF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BE42B9C81AEB965D00357EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE42B9CA1AEB965D00357EBF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		BE42B9CD1AEB965D00357EBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		BE42B9D31AEB965D00357EBF /* WheelToneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelToneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE42B9D81AEB965D00357EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelToneTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE42B9BB1AEB965D00357EBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE42B9D01AEB965D00357EBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE42B9B51AEB965D00357EBF = {
+			isa = PBXGroup;
+			children = (
+				BE42B9C01AEB965D00357EBF /* WheelTone */,
+				BE42B9D61AEB965D00357EBF /* WheelToneTests */,
+				BE42B9BF1AEB965D00357EBF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE42B9BF1AEB965D00357EBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE42B9BE1AEB965D00357EBF /* WheelTone.app */,
+				BE42B9D31AEB965D00357EBF /* WheelToneTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE42B9C01AEB965D00357EBF /* WheelTone */ = {
+			isa = PBXGroup;
+			children = (
+				BE42B9C31AEB965D00357EBF /* AppDelegate.swift */,
+				BE42B9C51AEB965D00357EBF /* ViewController.swift */,
+				BE42B9C71AEB965D00357EBF /* Main.storyboard */,
+				BE42B9CA1AEB965D00357EBF /* Images.xcassets */,
+				BE42B9CC1AEB965D00357EBF /* LaunchScreen.xib */,
+				BE42B9C11AEB965D00357EBF /* Supporting Files */,
+			);
+			path = WheelTone;
+			sourceTree = "<group>";
+		};
+		BE42B9C11AEB965D00357EBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE42B9C21AEB965D00357EBF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE42B9D61AEB965D00357EBF /* WheelToneTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */,
+				BE42B9D71AEB965D00357EBF /* Supporting Files */,
+			);
+			path = WheelToneTests;
+			sourceTree = "<group>";
+		};
+		BE42B9D71AEB965D00357EBF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BE42B9D81AEB965D00357EBF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE42B9BD1AEB965D00357EBF /* WheelTone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE42B9DD1AEB965D00357EBF /* Build configuration list for PBXNativeTarget "WheelTone" */;
+			buildPhases = (
+				BE42B9BA1AEB965D00357EBF /* Sources */,
+				BE42B9BB1AEB965D00357EBF /* Frameworks */,
+				BE42B9BC1AEB965D00357EBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WheelTone;
+			productName = WheelTone;
+			productReference = BE42B9BE1AEB965D00357EBF /* WheelTone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE42B9D21AEB965D00357EBF /* WheelToneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE42B9E01AEB965D00357EBF /* Build configuration list for PBXNativeTarget "WheelToneTests" */;
+			buildPhases = (
+				BE42B9CF1AEB965D00357EBF /* Sources */,
+				BE42B9D01AEB965D00357EBF /* Frameworks */,
+				BE42B9D11AEB965D00357EBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE42B9D51AEB965D00357EBF /* PBXTargetDependency */,
+			);
+			name = WheelToneTests;
+			productName = WheelToneTests;
+			productReference = BE42B9D31AEB965D00357EBF /* WheelToneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE42B9B61AEB965D00357EBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Simon Gladman";
+				TargetAttributes = {
+					BE42B9BD1AEB965D00357EBF = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					BE42B9D21AEB965D00357EBF = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = BE42B9BD1AEB965D00357EBF;
+					};
+				};
+			};
+			buildConfigurationList = BE42B9B91AEB965D00357EBF /* Build configuration list for PBXProject "WheelTone" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE42B9B51AEB965D00357EBF;
+			productRefGroup = BE42B9BF1AEB965D00357EBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE42B9BD1AEB965D00357EBF /* WheelTone */,
+				BE42B9D21AEB965D00357EBF /* WheelToneTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE42B9BC1AEB965D00357EBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE42B9C91AEB965D00357EBF /* Main.storyboard in Resources */,
+				BE42B9CE1AEB965D00357EBF /* LaunchScreen.xib in Resources */,
+				BE42B9CB1AEB965D00357EBF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE42B9D11AEB965D00357EBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE42B9BA1AEB965D00357EBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE42B9C61AEB965D00357EBF /* ViewController.swift in Sources */,
+				BE42B9C41AEB965D00357EBF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE42B9CF1AEB965D00357EBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE42B9DA1AEB965D00357EBF /* WheelToneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE42B9D51AEB965D00357EBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE42B9BD1AEB965D00357EBF /* WheelTone */;
+			targetProxy = BE42B9D41AEB965D00357EBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE42B9C71AEB965D00357EBF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE42B9C81AEB965D00357EBF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE42B9CC1AEB965D00357EBF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE42B9CD1AEB965D00357EBF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE42B9DB1AEB965D00357EBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		BE42B9DC1AEB965D00357EBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE42B9DE1AEB965D00357EBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WheelTone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BE42B9DF1AEB965D00357EBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WheelTone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BE42B9E11AEB965D00357EBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WheelToneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WheelTone.app/WheelTone";
+			};
+			name = Debug;
+		};
+		BE42B9E21AEB965D00357EBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WheelToneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WheelTone.app/WheelTone";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE42B9B91AEB965D00357EBF /* Build configuration list for PBXProject "WheelTone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE42B9DB1AEB965D00357EBF /* Debug */,
+				BE42B9DC1AEB965D00357EBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE42B9DD1AEB965D00357EBF /* Build configuration list for PBXNativeTarget "WheelTone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE42B9DE1AEB965D00357EBF /* Debug */,
+				BE42B9DF1AEB965D00357EBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BE42B9E01AEB965D00357EBF /* Build configuration list for PBXNativeTarget "WheelToneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE42B9E11AEB965D00357EBF /* Debug */,
+				BE42B9E21AEB965D00357EBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE42B9B61AEB965D00357EBF /* Project object */;
+}
