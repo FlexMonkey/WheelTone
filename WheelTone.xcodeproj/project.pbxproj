@@ -13,6 +13,7 @@
 		BE42B9CB1AEB965D00357EBF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE42B9CA1AEB965D00357EBF /* Images.xcassets */; };
 		BE42B9CE1AEB965D00357EBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE42B9CC1AEB965D00357EBF /* LaunchScreen.xib */; };
 		BE42B9DA1AEB965D00357EBF /* WheelToneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */; };
+		BE42B9E51AEB987800357EBF /* WheelWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9E41AEB987800357EBF /* WheelWidget.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		BE42B9D31AEB965D00357EBF /* WheelToneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WheelToneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE42B9D81AEB965D00357EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelToneTests.swift; sourceTree = "<group>"; };
+		BE42B9E41AEB987800357EBF /* WheelWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelWidget.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		BE42B9C01AEB965D00357EBF /* WheelTone */ = {
 			isa = PBXGroup;
 			children = (
+				BE42B9E31AEB97D500357EBF /* widgets */,
 				BE42B9C31AEB965D00357EBF /* AppDelegate.swift */,
 				BE42B9C51AEB965D00357EBF /* ViewController.swift */,
 				BE42B9C71AEB965D00357EBF /* Main.storyboard */,
@@ -110,6 +113,14 @@
 				BE42B9D81AEB965D00357EBF /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BE42B9E31AEB97D500357EBF /* widgets */ = {
+			isa = PBXGroup;
+			children = (
+				BE42B9E41AEB987800357EBF /* WheelWidget.swift */,
+			);
+			name = widgets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +225,7 @@
 			files = (
 				BE42B9C61AEB965D00357EBF /* ViewController.swift in Sources */,
 				BE42B9C41AEB965D00357EBF /* AppDelegate.swift in Sources */,
+				BE42B9E51AEB987800357EBF /* WheelWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
