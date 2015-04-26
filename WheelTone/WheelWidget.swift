@@ -66,11 +66,7 @@ class WheelWidget: CAShapeLayer
     
     override func actionForLayer(layer: CALayer!, forKey event: String!) -> CAAction!
     {
-        if layer == self && event == "lineDashPhase"
-        {
-            return nil
-        }
-        else if layer == self && event == "position"
+        if layer == self && event == "position"
         {
             let animation = CABasicAnimation(keyPath: event)
             animation.duration = 0.075
@@ -122,9 +118,7 @@ class WheelWidget: CAShapeLayer
             fillColor = selected ? UIColor.blueColor().CGColor : UIColor.lightGrayColor().CGColor
         }
     }
-    
-    var gearPath = CGPathCreateMutable()
-    
+
     override func display()
     {
         super.display()
@@ -139,16 +133,16 @@ class WheelWidget: CAShapeLayer
   
         if radiusChanged || rotationChanged
         {
-            var tx = CGAffineTransformMakeRotation(rotation)
+            var rotateTransform = CGAffineTransformMakeRotation(rotation)
             
             if radiusChanged
             {
-                gearShape.path = CGPathCreateWithEllipseInRect(boundingBox, &tx)
+                gearShape.path = CGPathCreateWithEllipseInRect(boundingBox, &rotateTransform)
                 gearShape.lineDashPattern = [circumference / 60]
             }
             else
             {
-                gearShape.path = CGPathCreateCopyByTransformingPath(gearShape.path, &tx)
+                gearShape.path = CGPathCreateCopyByTransformingPath(gearShape.path, &rotateTransform)
             }
 
             rotationChanged = false

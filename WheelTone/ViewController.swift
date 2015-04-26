@@ -14,6 +14,7 @@ class ViewController: UIViewController
  
     var previuosPanOrigin: CGPoint?
     var previousPinchRadius: CGFloat?
+    var rotatedWidgets = [WheelWidget]()
     
     override func viewDidLoad()
     {
@@ -43,10 +44,7 @@ class ViewController: UIViewController
             selectedWheelWidget?.selected = true
         }
     }
-    
-    let rotation = CATransform3DMakeRotation(0, 0, 0, 1)
-    var rotatedWidgets = [WheelWidget]()
-    
+   
     func step()
     {
         firstWheelWidget.rotation += 0.00000001
