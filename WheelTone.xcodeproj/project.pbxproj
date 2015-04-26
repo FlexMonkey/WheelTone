@@ -14,6 +14,7 @@
 		BE42B9CE1AEB965D00357EBF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE42B9CC1AEB965D00357EBF /* LaunchScreen.xib */; };
 		BE42B9DA1AEB965D00357EBF /* WheelToneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */; };
 		BE42B9E51AEB987800357EBF /* WheelWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9E41AEB987800357EBF /* WheelWidget.swift */; };
+		BE42B9E81AECA42400357EBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9E71AECA42400357EBF /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		BE42B9D81AEB965D00357EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelToneTests.swift; sourceTree = "<group>"; };
 		BE42B9E41AEB987800357EBF /* WheelWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelWidget.swift; sourceTree = "<group>"; };
+		BE42B9E71AECA42400357EBF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		BE42B9C01AEB965D00357EBF /* WheelTone */ = {
 			isa = PBXGroup;
 			children = (
+				BE42B9E61AECA41400357EBF /* utils */,
 				BE42B9E31AEB97D500357EBF /* widgets */,
 				BE42B9C31AEB965D00357EBF /* AppDelegate.swift */,
 				BE42B9C51AEB965D00357EBF /* ViewController.swift */,
@@ -121,6 +124,14 @@
 				BE42B9E41AEB987800357EBF /* WheelWidget.swift */,
 			);
 			name = widgets;
+			sourceTree = "<group>";
+		};
+		BE42B9E61AECA41400357EBF /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				BE42B9E71AECA42400357EBF /* Extensions.swift */,
+			);
+			name = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +237,7 @@
 				BE42B9C61AEB965D00357EBF /* ViewController.swift in Sources */,
 				BE42B9C41AEB965D00357EBF /* AppDelegate.swift in Sources */,
 				BE42B9E51AEB987800357EBF /* WheelWidget.swift in Sources */,
+				BE42B9E81AECA42400357EBF /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
