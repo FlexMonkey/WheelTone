@@ -152,12 +152,19 @@ class ViewController: UIViewController
             }
             else
             {
-                selectedWheelWidget?.frequency = selectedWheelWidget?.frequency == nil ? 100 : nil
+                if let selectedWheelWidget = selectedWheelWidget where selectedWheelWidget.frequency == nil
+                {
+                    selectedWheelWidget.frequency = WheelWidget.getFrequencyForRadius(selectedWheelWidget.radius)
+                }
+                else
+                {
+                    selectedWheelWidget?.frequency = nil
+                }
+                
             }
         default:
             selectedWheelWidget = nil
         }
-        
     }
     
     func getWheelWidgetAtLocation(location: CGPoint) -> WheelWidget?
