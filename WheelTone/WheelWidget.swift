@@ -12,7 +12,7 @@ class WheelWidget: CAShapeLayer
 {
     private var rotationChanged: Bool = true
     private var radiusChanged: Bool = true
-    private var previousRadius: CGFloat = 0
+    private var originChanged: Bool = true
     
     private var gearShape = CAShapeLayer()
     
@@ -86,7 +86,6 @@ class WheelWidget: CAShapeLayer
             
             if oldValue != radius
             {
-                previousRadius = radius
                 radiusChanged = true
             }
             
@@ -97,7 +96,7 @@ class WheelWidget: CAShapeLayer
     var rotation: CGFloat = 0
     {
         didSet
-        {
+        {            
             rotationChanged = true
             setNeedsDisplay()
         }
@@ -107,6 +106,7 @@ class WheelWidget: CAShapeLayer
     {
         didSet
         {
+            originChanged = true
             setNeedsDisplay();
         }
     }
@@ -126,30 +126,28 @@ class WheelWidget: CAShapeLayer
         let diameter = radius * 2
         let circumference = CGFloat(M_PI) * diameter
 
-        frame.origin.x = origin.x
-        frame.origin.y = origin.y
-        
         let boundingBox = CGRect(x: -radius, y: -radius, width: diameter, height: diameter)
-  
-        if radiusChanged || rotationChanged
+        
+        if originChanged
+        {
+            frame.origin.x = origin.x
+            frame.origin.y = origin.y
+            
+            originChanged = false
+        }
+        
+        if rotationChanged
         {
             var rotateTransform = CGAffineTransformMakeRotation(rotation)
-            
-            if radiusChanged
-            {
-                gearShape.path = CGPathCreateWithEllipseInRect(boundingBox, &rotateTransform)
-                gearShape.lineDashPattern = [circumference / 60]
-            }
-            else
-            {
-                gearShape.path = CGPathCreateCopyByTransformingPath(gearShape.path, &rotateTransform)
-            }
+            gearShape.path = CGPathCreateWithEllipseInRect(boundingBox, &rotateTransform)
 
             rotationChanged = false
         }
         
         if radiusChanged
         {
+            gearShape.lineDashPattern = [circumference / 60]
+            
             path = CGPathCreateWithEllipseInRect(boundingBox, nil)
             
             radiusChanged = false

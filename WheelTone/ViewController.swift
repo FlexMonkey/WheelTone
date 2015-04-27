@@ -47,7 +47,7 @@ class ViewController: UIViewController
    
     func step()
     {
-        firstWheelWidget.rotation += 0.00000001
+        firstWheelWidget.rotation += 0.005
 
         rotatedWidgets = [WheelWidget]()
         
