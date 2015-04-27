@@ -150,6 +150,10 @@ class ViewController: UIViewController
                 
                 selectedWheelWidget = widget
             }
+            else
+            {
+                selectedWheelWidget?.frequency = selectedWheelWidget?.frequency == nil ? 100 : nil
+            }
         default:
             selectedWheelWidget = nil
         }

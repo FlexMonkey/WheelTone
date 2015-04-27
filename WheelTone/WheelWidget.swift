@@ -14,7 +14,10 @@ class WheelWidget: CAShapeLayer
     private var radiusChanged: Bool = true
     private var originChanged: Bool = true
     
-    private var gearShape = CAShapeLayer()
+    private var rotationCount: Int = 0
+    private var lastPingedRotationCount: Int = -1
+    
+    private let gearShape = CAShapeLayer()
     
     required init(radius: CGFloat, origin: CGPoint)
     {
@@ -33,12 +36,14 @@ class WheelWidget: CAShapeLayer
         fillColor = UIColor.lightGrayColor().CGColor
         
         delegate = self
-      
+        
         gearShape.fillColor = nil
         gearShape.strokeColor = UIColor.redColor().CGColor
         gearShape.lineCap = kCALineCapButt
         gearShape.lineWidth = lineWidth
         addSublayer(gearShape)
+        
+        updateColorForState()
         
         setNeedsDisplay()
     }
@@ -93,12 +98,23 @@ class WheelWidget: CAShapeLayer
         }
     }
     
+
+    
     var rotation: CGFloat = 0
     {
         didSet
         {            
             rotationChanged = true
             setNeedsDisplay()
+            
+            rotationCount = Int(rotation / CGFloat(M_PI * 2))
+            
+            if lastPingedRotationCount != rotationCount
+            {
+                println("ping!")
+                
+                lastPingedRotationCount = rotationCount
+            }
         }
     }
     
@@ -111,14 +127,27 @@ class WheelWidget: CAShapeLayer
         }
     }
     
+    var frequency: Int?
+    {
+        didSet
+        {
+            updateColorForState()
+        }
+    }
+    
     var selected: Bool = false
     {
         didSet
         {
-            fillColor = selected ? UIColor.blueColor().CGColor : UIColor.lightGrayColor().CGColor
+            updateColorForState()
         }
     }
 
+    func updateColorForState()
+    {
+        fillColor = selected ? UIColor.blueColor().CGColor : frequency == nil ? UIColor.lightGrayColor().CGColor : UIColor.darkGrayColor().CGColor
+    }
+    
     override func display()
     {
         super.display()
@@ -136,17 +165,28 @@ class WheelWidget: CAShapeLayer
             originChanged = false
         }
         
-        if rotationChanged
+        if rotationChanged || radiusChanged
         {
             var rotateTransform = CGAffineTransformMakeRotation(rotation)
-            gearShape.path = CGPathCreateWithEllipseInRect(boundingBox, &rotateTransform)
+            
+            let gearPath = CGPathCreateMutable()
+            
+            CGPathAddEllipseInRect(gearPath, &rotateTransform, boundingBox)
+            
+            if frequency != nil
+            {
+                CGPathMoveToPoint(gearPath, &rotateTransform, 0, 0 - radius + 10)
+                CGPathAddLineToPoint(gearPath, &rotateTransform, 0, 0)
+            }
+            
+            gearShape.path = gearPath
 
             rotationChanged = false
         }
         
         if radiusChanged
         {
-            gearShape.lineDashPattern = [circumference / 60]
+            gearShape.lineDashPattern = [circumference / 50]
             
             path = CGPathCreateWithEllipseInRect(boundingBox, nil)
             
