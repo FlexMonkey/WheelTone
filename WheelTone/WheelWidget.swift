@@ -37,8 +37,7 @@ class WheelWidget: CAShapeLayer
         
         lineWidth = 10
         
-        strokeColor = UIColor.darkGrayColor().CGColor
-        fillColor = UIColor.lightGrayColor().CGColor
+        strokeColor = UIColor.darkGrayColor().CGColor        
         
         delegate = self
         gearShape.delegate = self
@@ -108,9 +107,8 @@ class WheelWidget: CAShapeLayer
             if oldValue != radius
             {
                 radiusChanged = true
+                setNeedsDisplay()
             }
-            
-            setNeedsDisplay()
         }
     }
     
