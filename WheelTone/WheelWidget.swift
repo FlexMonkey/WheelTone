@@ -41,6 +41,7 @@ class WheelWidget: CAShapeLayer
         fillColor = UIColor.lightGrayColor().CGColor
         
         delegate = self
+        gearShape.delegate = self
         
         gearShape.fillColor = nil
         gearShape.strokeColor = UIColor.redColor().CGColor
@@ -53,6 +54,8 @@ class WheelWidget: CAShapeLayer
         setNeedsDisplay()
     }
 
+    
+    
     required init(coder aDecoder: NSCoder)
     {
         fatalError("init(coder:) has not been implemented")
@@ -76,7 +79,15 @@ class WheelWidget: CAShapeLayer
     
     override func actionForLayer(layer: CALayer!, forKey event: String!) -> CAAction!
     {
-        if layer == self && event == "position"
+        if layer == gearShape
+        {
+            return NSNull()
+        }
+        else if layer == self && (event == "onDraw" || event == "contents")
+        {
+            return NSNull()
+        }
+        else if layer == self && event == "position"
         {
             let animation = CABasicAnimation(keyPath: event)
             animation.duration = 0.075

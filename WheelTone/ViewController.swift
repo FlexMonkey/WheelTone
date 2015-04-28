@@ -32,7 +32,10 @@ class ViewController: UIViewController
         
         let longPress = UILongPressGestureRecognizer(target: self, action: "longPressHandler:")
         view.addGestureRecognizer(longPress)
-        
+    }
+    
+    override func viewDidAppear(animated: Bool)
+    {
         step()
     }
     
@@ -44,7 +47,7 @@ class ViewController: UIViewController
             selectedWheelWidget?.selected = true
         }
     }
-   
+    
     func step()
     {
         firstWheelWidget.rotation += 0.005
