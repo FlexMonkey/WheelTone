@@ -19,10 +19,10 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+
         firstWheelWidget.origin = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2)
         view.layer.addSublayer(firstWheelWidget)
-
+        
         let pinch = UIPinchGestureRecognizer(target: self, action: "pinchHandler:")
         view.addGestureRecognizer(pinch)
     
@@ -32,11 +32,6 @@ class ViewController: UIViewController
         
         let longPress = UILongPressGestureRecognizer(target: self, action: "longPressHandler:")
         view.addGestureRecognizer(longPress)
-    }
-    
-    override func viewDidAppear(animated: Bool)
-    {
-        step()
     }
     
     var selectedWheelWidget: WheelWidget?
