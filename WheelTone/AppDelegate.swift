@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication)
-    {        
-        (window?.rootViewController as? ViewController)?.step()
+    {
+        (window?.rootViewController as? ViewController)?.start()
     }
 
 }

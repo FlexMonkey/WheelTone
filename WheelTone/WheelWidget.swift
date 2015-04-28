@@ -39,6 +39,9 @@ class WheelWidget: CAShapeLayer
         
         strokeColor = UIColor.darkGrayColor().CGColor        
         
+        drawsAsynchronously = true
+        gearShape.drawsAsynchronously = true
+        
         delegate = self
         gearShape.delegate = self
         
@@ -50,7 +53,7 @@ class WheelWidget: CAShapeLayer
         
         updateColorForState()
         
-        setNeedsDisplay()
+        setNeedsLayout()
     }
 
     
@@ -107,7 +110,7 @@ class WheelWidget: CAShapeLayer
             if oldValue != radius
             {
                 radiusChanged = true
-                setNeedsDisplay()
+                setNeedsLayout()
             }
         }
     }
@@ -117,8 +120,8 @@ class WheelWidget: CAShapeLayer
         didSet
         {            
             rotationChanged = true
-            setNeedsDisplay()
-            
+            setNeedsLayout()
+      
             rotationCount = Int(rotation / CGFloat(M_PI * 2))
             
             if lastPingedRotationCount != rotationCount && frequency != nil
@@ -135,7 +138,7 @@ class WheelWidget: CAShapeLayer
         didSet
         {
             originChanged = true
-            setNeedsDisplay();
+            setNeedsLayout();
         }
     }
     
@@ -160,9 +163,9 @@ class WheelWidget: CAShapeLayer
         fillColor = selected ? UIColor.blueColor().CGColor : frequency == nil ? UIColor.lightGrayColor().CGColor : UIColor.darkGrayColor().CGColor
     }
     
-    override func display()
+    override func layoutSublayers()
     {
-        super.display()
+        super.layoutSublayers()
 
         let diameter = radius * 2
         let circumference = CGFloat(M_PI) * diameter

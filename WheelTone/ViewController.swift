@@ -43,18 +43,18 @@ class ViewController: UIViewController
         }
     }
     
+    func start()
+    {
+         NSTimer.scheduledTimerWithTimeInterval(1 / 40, target: self, selector: "step", userInfo: nil, repeats: true)
+    }
+    
     func step()
     {
-        firstWheelWidget.rotation += 0.005
+        firstWheelWidget.rotation += 0.025
 
         rotatedWidgets = [WheelWidget]()
         
         updateAdjacentWheelWidgets(firstWheelWidget, angle: firstWheelWidget.rotation)
-
-        dispatch_async(dispatch_get_main_queue(),
-        {
-                self.step();
-        })
     }
     
     func updateAdjacentWheelWidgets(sourceWidget: WheelWidget, angle: CGFloat)
@@ -78,8 +78,6 @@ class ViewController: UIViewController
     
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent)
     {
-        super.touchesBegan(touches, withEvent: event)
-        
         if let locationInView = (touches.first as? UITouch)?.locationInView(view)
         {
             selectedWheelWidget = getWheelWidgetAtLocation(locationInView)
@@ -88,8 +86,6 @@ class ViewController: UIViewController
     
     override func touchesEnded(touches: Set<NSObject>, withEvent event: UIEvent)
     {
-        super.touchesEnded(touches, withEvent: event)
-        
         selectedWheelWidget = nil
     }
     
