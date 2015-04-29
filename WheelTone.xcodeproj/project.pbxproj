@@ -10,7 +10,6 @@
 		BE1C43931AF094D200F71149 /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1C438C1AF094A000F71149 /* libAudioKit iOS Static.a */; };
 		BE1C43971AF0959400F71149 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1C43961AF0959400F71149 /* Instrument.swift */; };
 		BE1C43991AF095B500F71149 /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1C43981AF095B500F71149 /* Conductor.swift */; };
-		BE1C439B1AF097E600F71149 /* AKSoundFiles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE1C439A1AF097E600F71149 /* AKSoundFiles.bundle */; };
 		BE42B9C41AEB965D00357EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9C31AEB965D00357EBF /* AppDelegate.swift */; };
 		BE42B9C61AEB965D00357EBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9C51AEB965D00357EBF /* ViewController.swift */; };
 		BE42B9C91AEB965D00357EBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE42B9C71AEB965D00357EBF /* Main.storyboard */; };
@@ -19,6 +18,7 @@
 		BE42B9DA1AEB965D00357EBF /* WheelToneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */; };
 		BE42B9E51AEB987800357EBF /* WheelWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9E41AEB987800357EBF /* WheelWidget.swift */; };
 		BE42B9E81AECA42400357EBF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9E71AECA42400357EBF /* Extensions.swift */; };
+		BEF444051AF165CF006E1BB3 /* AKSoundFiles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BEF444041AF165CF006E1BB3 /* AKSoundFiles.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +64,6 @@
 		BE1C43941AF0954200F71149 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Header.h; path = WheelTone/Header.h; sourceTree = "<group>"; };
 		BE1C43961AF0959400F71149 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
 		BE1C43981AF095B500F71149 /* Conductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
-		BE1C439A1AF097E600F71149 /* AKSoundFiles.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AKSoundFiles.bundle; path = AudioKit/AudioKit/AKSoundFiles.bundle; sourceTree = "<group>"; };
 		BE42B9BE1AEB965D00357EBF /* WheelTone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelTone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE42B9C21AEB965D00357EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE42B9C31AEB965D00357EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		BE42B9D91AEB965D00357EBF /* WheelToneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelToneTests.swift; sourceTree = "<group>"; };
 		BE42B9E41AEB987800357EBF /* WheelWidget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WheelWidget.swift; sourceTree = "<group>"; };
 		BE42B9E71AECA42400357EBF /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BEF444041AF165CF006E1BB3 /* AKSoundFiles.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AKSoundFiles.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				BE1C43961AF0959400F71149 /* Instrument.swift */,
+				BEF444041AF165CF006E1BB3 /* AKSoundFiles.bundle */,
 				BE1C43981AF095B500F71149 /* Conductor.swift */,
 			);
 			name = audioKit;
@@ -120,7 +121,6 @@
 		BE42B9B51AEB965D00357EBF = {
 			isa = PBXGroup;
 			children = (
-				BE1C439A1AF097E600F71149 /* AKSoundFiles.bundle */,
 				BE1C43941AF0954200F71149 /* Header.h */,
 				BE1C43851AF094A000F71149 /* AudioKit.xcodeproj */,
 				BE42B9C01AEB965D00357EBF /* WheelTone */,
@@ -309,7 +309,7 @@
 				BE42B9C91AEB965D00357EBF /* Main.storyboard in Resources */,
 				BE42B9CE1AEB965D00357EBF /* LaunchScreen.xib in Resources */,
 				BE42B9CB1AEB965D00357EBF /* Images.xcassets in Resources */,
-				BE1C439B1AF097E600F71149 /* AKSoundFiles.bundle in Resources */,
+				BEF444051AF165CF006E1BB3 /* AKSoundFiles.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
