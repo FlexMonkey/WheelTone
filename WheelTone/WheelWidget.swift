@@ -111,9 +111,14 @@ class WheelWidget: CAShapeLayer
         didSet
         {
             radius = min(max(radius, WheelWidget.minRadius), WheelWidget.maxRadius)
-            
+
             if oldValue != radius
             {
+                if frequency != nil
+                {
+                    frequency = WheelWidget.getFrequencyForRadius(radius)
+                }
+                
                 radiusChanged = true
                 setNeedsLayout()
             }

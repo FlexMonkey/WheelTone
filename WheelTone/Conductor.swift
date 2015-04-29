@@ -21,7 +21,7 @@ class Conductor {
     
     func play(#frequency: Float, amplitude: Float, instrument: Instruments)
     {
-        let barNote = BarNote(frequency: frequency, amplitude: amplitude); println("play \(frequency) \(amplitude)")
+        let barNote = BarNote(frequency: frequency, amplitude: amplitude)
         barNote.duration.value = 3.0
         
         switch instrument
