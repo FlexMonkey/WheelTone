@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE1C43931AF094D200F71149 /* libAudioKit iOS Static.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1C438C1AF094A000F71149 /* libAudioKit iOS Static.a */; };
+		BE1C43971AF0959400F71149 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1C43961AF0959400F71149 /* Instrument.swift */; };
+		BE1C43991AF095B500F71149 /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1C43981AF095B500F71149 /* Conductor.swift */; };
+		BE1C439B1AF097E600F71149 /* AKSoundFiles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BE1C439A1AF097E600F71149 /* AKSoundFiles.bundle */; };
 		BE42B9C41AEB965D00357EBF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9C31AEB965D00357EBF /* AppDelegate.swift */; };
 		BE42B9C61AEB965D00357EBF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE42B9C51AEB965D00357EBF /* ViewController.swift */; };
 		BE42B9C91AEB965D00357EBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE42B9C71AEB965D00357EBF /* Main.storyboard */; };
@@ -18,6 +22,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BE1C438B1AF094A000F71149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE1C43851AF094A000F71149 /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA8E93D81AD3C5240057E979;
+			remoteInfo = "AudioKit iOS Static";
+		};
+		BE1C438D1AF094A000F71149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE1C43851AF094A000F71149 /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EAA0F5941AE71C8F007CD7C9;
+			remoteInfo = "AudioKit iOS Dynamic";
+		};
+		BE1C438F1AF094A000F71149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE1C43851AF094A000F71149 /* AudioKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EA8E96591AD3C6FC0057E979;
+			remoteInfo = "AudioKit OS X";
+		};
+		BE1C43911AF094CC00F71149 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE1C43851AF094A000F71149 /* AudioKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EA8E93D71AD3C5240057E979;
+			remoteInfo = "AudioKit iOS Static";
+		};
 		BE42B9D41AEB965D00357EBF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BE42B9B61AEB965D00357EBF /* Project object */;
@@ -28,6 +60,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BE1C43851AF094A000F71149 /* AudioKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AudioKit.xcodeproj; path = AudioKit/AudioKit.xcodeproj; sourceTree = "<group>"; };
+		BE1C43941AF0954200F71149 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Header.h; path = WheelTone/Header.h; sourceTree = "<group>"; };
+		BE1C43961AF0959400F71149 /* Instrument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		BE1C43981AF095B500F71149 /* Conductor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
+		BE1C439A1AF097E600F71149 /* AKSoundFiles.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = AKSoundFiles.bundle; path = AudioKit/AudioKit/AKSoundFiles.bundle; sourceTree = "<group>"; };
 		BE42B9BE1AEB965D00357EBF /* WheelTone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WheelTone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE42B9C21AEB965D00357EBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE42B9C31AEB965D00357EBF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1C43931AF094D200F71149 /* libAudioKit iOS Static.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,9 +98,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE1C43861AF094A000F71149 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE1C438C1AF094A000F71149 /* libAudioKit iOS Static.a */,
+				BE1C438E1AF094A000F71149 /* libAudioKit iOS Dynamic.a */,
+				BE1C43901AF094A000F71149 /* libAudioKit OS X.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE1C43951AF0957C00F71149 /* audioKit */ = {
+			isa = PBXGroup;
+			children = (
+				BE1C43961AF0959400F71149 /* Instrument.swift */,
+				BE1C43981AF095B500F71149 /* Conductor.swift */,
+			);
+			name = audioKit;
+			sourceTree = "<group>";
+		};
 		BE42B9B51AEB965D00357EBF = {
 			isa = PBXGroup;
 			children = (
+				BE1C439A1AF097E600F71149 /* AKSoundFiles.bundle */,
+				BE1C43941AF0954200F71149 /* Header.h */,
+				BE1C43851AF094A000F71149 /* AudioKit.xcodeproj */,
 				BE42B9C01AEB965D00357EBF /* WheelTone */,
 				BE42B9D61AEB965D00357EBF /* WheelToneTests */,
 				BE42B9BF1AEB965D00357EBF /* Products */,
@@ -81,6 +141,7 @@
 		BE42B9C01AEB965D00357EBF /* WheelTone */ = {
 			isa = PBXGroup;
 			children = (
+				BE1C43951AF0957C00F71149 /* audioKit */,
 				BE42B9E61AECA41400357EBF /* utils */,
 				BE42B9E31AEB97D500357EBF /* widgets */,
 				BE42B9C31AEB965D00357EBF /* AppDelegate.swift */,
@@ -148,6 +209,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				BE1C43921AF094CC00F71149 /* PBXTargetDependency */,
 			);
 			name = WheelTone;
 			productName = WheelTone;
@@ -201,6 +263,12 @@
 			mainGroup = BE42B9B51AEB965D00357EBF;
 			productRefGroup = BE42B9BF1AEB965D00357EBF /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BE1C43861AF094A000F71149 /* Products */;
+					ProjectRef = BE1C43851AF094A000F71149 /* AudioKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BE42B9BD1AEB965D00357EBF /* WheelTone */,
@@ -208,6 +276,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BE1C438C1AF094A000F71149 /* libAudioKit iOS Static.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit iOS Static.a";
+			remoteRef = BE1C438B1AF094A000F71149 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE1C438E1AF094A000F71149 /* libAudioKit iOS Dynamic.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit iOS Dynamic.a";
+			remoteRef = BE1C438D1AF094A000F71149 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BE1C43901AF094A000F71149 /* libAudioKit OS X.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libAudioKit OS X.a";
+			remoteRef = BE1C438F1AF094A000F71149 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BE42B9BC1AEB965D00357EBF /* Resources */ = {
@@ -217,6 +309,7 @@
 				BE42B9C91AEB965D00357EBF /* Main.storyboard in Resources */,
 				BE42B9CE1AEB965D00357EBF /* LaunchScreen.xib in Resources */,
 				BE42B9CB1AEB965D00357EBF /* Images.xcassets in Resources */,
+				BE1C439B1AF097E600F71149 /* AKSoundFiles.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,6 +327,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1C43971AF0959400F71149 /* Instrument.swift in Sources */,
+				BE1C43991AF095B500F71149 /* Conductor.swift in Sources */,
 				BE42B9C61AEB965D00357EBF /* ViewController.swift in Sources */,
 				BE42B9C41AEB965D00357EBF /* AppDelegate.swift in Sources */,
 				BE42B9E51AEB987800357EBF /* WheelWidget.swift in Sources */,
@@ -252,6 +347,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BE1C43921AF094CC00F71149 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AudioKit iOS Static";
+			targetProxy = BE1C43911AF094CC00F71149 /* PBXContainerItemProxy */;
+		};
 		BE42B9D51AEB965D00357EBF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BE42B9BD1AEB965D00357EBF /* WheelTone */;
@@ -368,7 +468,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WheelTone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./WheelTone/Header.h;
+				USER_HEADER_SEARCH_PATHS = "./AudioKit/AudioKit/**";
 			};
 			name = Debug;
 		};
@@ -378,7 +481,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WheelTone/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ./WheelTone/Header.h;
+				USER_HEADER_SEARCH_PATHS = "./AudioKit/AudioKit/**";
 			};
 			name = Release;
 		};
@@ -435,6 +541,7 @@
 				BE42B9DF1AEB965D00357EBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE42B9E01AEB965D00357EBF /* Build configuration list for PBXNativeTarget "WheelToneTests" */ = {
 			isa = XCConfigurationList;
@@ -443,6 +550,7 @@
 				BE42B9E21AEB965D00357EBF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

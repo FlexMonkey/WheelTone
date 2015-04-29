@@ -22,12 +22,15 @@ class WheelWidget: CAShapeLayer
     static let minRadius: CGFloat = 25
     static let maxRadius: CGFloat = 250
     
+    let conductor: Conductor?
+    
     private let gearShape = CAShapeLayer()
     
-    required init(radius: CGFloat, origin: CGPoint)
+    required init(radius: CGFloat, origin: CGPoint, conductor: Conductor)
     {
         self.radius = radius
         self.origin = origin
+        self.conductor = conductor
         
         super.init()
         
@@ -69,11 +72,13 @@ class WheelWidget: CAShapeLayer
         {
             radius = layer.radius
             origin = layer.origin
+            conductor = layer.conductor
         }
         else
         {
             radius = 0
             origin = CGPointZero
+            conductor = nil
         }
         
         super.init(layer: layer)
@@ -124,9 +129,11 @@ class WheelWidget: CAShapeLayer
       
             rotationCount = Int(rotation / CGFloat(M_PI * 2))
             
-            if lastPingedRotationCount != rotationCount && frequency != nil
+            if let frequency = frequency where lastPingedRotationCount != rotationCount
             {
                 println("ping!")
+                
+                conductor?.play(frequency: Float(frequency), amplitude: 0.15, instrument: Instruments.vibes)
                 
                 lastPingedRotationCount = rotationCount
             }
