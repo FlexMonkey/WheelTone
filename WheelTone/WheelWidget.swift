@@ -136,14 +136,19 @@ class WheelWidget: CAShapeLayer
             
             if let frequency = frequency where lastPingedRotationCount != rotationCount
             {
-                fillColor = UIColor.yellowColor().CGColor
-                NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateColorForState", userInfo: nil, repeats: false)
+                flash()
                 
                 conductor?.play(frequency: Float(frequency), amplitude: 0.15, instrument: Instruments.vibes)
                 
                 lastPingedRotationCount = rotationCount
             }
         }
+    }
+    
+    func flash()
+    {
+        fillColor = UIColor.yellowColor().CGColor
+        NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateColorForState", userInfo: nil, repeats: false)
     }
     
     var origin: CGPoint
@@ -159,7 +164,14 @@ class WheelWidget: CAShapeLayer
     {
         didSet
         {
-            updateColorForState()
+            if oldValue == nil && frequency != nil
+            {
+                flash()
+            }
+            else
+            {
+                updateColorForState()
+            }
         }
     }
     
@@ -192,7 +204,7 @@ class WheelWidget: CAShapeLayer
             
             originChanged = false
         }
-        
+
         if rotationChanged || radiusChanged
         {
             var rotateTransform = CGAffineTransformMakeRotation(rotation)

@@ -143,7 +143,6 @@ class ViewController: UIViewController
             {
                 let locationInView = recognizer.locationInView(view)
                 let widget = WheelWidget(radius: 100, origin: locationInView, conductor: conductor)
-                widget.frequency = WheelWidget.getFrequencyForRadius(100)
                 view.layer.addSublayer(widget)
                 
                 selectedWheelWidget = widget
