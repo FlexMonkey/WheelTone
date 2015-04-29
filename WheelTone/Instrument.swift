@@ -14,7 +14,7 @@ extension Double
     {
         get
         {
-            return AKConstant(value: Float(self))
+            return AKConstant(float: Float(self))
         }
     }
 }
@@ -54,11 +54,10 @@ class VibesInstrument: AKInstrument
         addNoteProperty(note.amplitude)
         
         let instrument = AKVibes()
-        
-        /*
+  
         instrument.tremoloAmplitude = 5.ak
         instrument.tremoloFrequency = 1.ak
-        */
+      
         instrument.frequency = note.frequency
         instrument.amplitude = note.amplitude
         
