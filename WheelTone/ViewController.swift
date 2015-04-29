@@ -23,7 +23,7 @@ class ViewController: UIViewController
 
         firstWheelWidget = WheelWidget(radius: 100, origin: CGPointZero, conductor: conductor)
         firstWheelWidget.origin = CGPoint(x: view.frame.width / 2, y: view.frame.height / 2)
-        firstWheelWidget.frequency = CGFloat(440)
+        firstWheelWidget.frequency = WheelWidget.getFrequencyForRadius(100)
         view.layer.addSublayer(firstWheelWidget)
         
         let pinch = UIPinchGestureRecognizer(target: self, action: "pinchHandler:")
@@ -143,6 +143,7 @@ class ViewController: UIViewController
             {
                 let locationInView = recognizer.locationInView(view)
                 let widget = WheelWidget(radius: 100, origin: locationInView, conductor: conductor)
+                firstWheelWidget.frequency = WheelWidget.getFrequencyForRadius(100)
                 view.layer.addSublayer(widget)
                 
                 selectedWheelWidget = widget

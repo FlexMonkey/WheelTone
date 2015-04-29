@@ -131,7 +131,8 @@ class WheelWidget: CAShapeLayer
             
             if let frequency = frequency where lastPingedRotationCount != rotationCount
             {
-                println("ping!")
+                fillColor = UIColor.yellowColor().CGColor
+                NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateColorForState", userInfo: nil, repeats: false)
                 
                 conductor?.play(frequency: Float(frequency), amplitude: 0.15, instrument: Instruments.vibes)
                 
