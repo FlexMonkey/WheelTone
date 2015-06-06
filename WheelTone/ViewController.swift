@@ -48,7 +48,8 @@ class ViewController: UIViewController
     
     func start()
     {
-         NSTimer.scheduledTimerWithTimeInterval(1 / 40, target: self, selector: "step", userInfo: nil, repeats: true)
+        let timer = CADisplayLink(target: self, selector: Selector("step"))
+        timer.addToRunLoop(NSRunLoop.mainRunLoop(), forMode: NSDefaultRunLoopMode)
     }
     
     func step()
